@@ -1,11 +1,12 @@
 import React from 'react'
 import {View, Text} from 'react-native'
 
+import Item from './Item'
 const CarDetail = props => {
   return (
-    <View>
+    <Item>
       <Text>{props.brand.model[0].name}</Text>
-    </View>
+    </Item>
   )
 }
 export default CarDetail
