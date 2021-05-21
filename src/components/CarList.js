@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View} from 'react-native'
+import {ScrollView} from 'react-native'
 import axios from 'axios'
 
 import CarDetail from './CarDetail'
@@ -12,6 +12,7 @@ class CarList extends Component {
   componentDidMount () {
     axios.get('https://givecars.herokuapp.com').then(res => {
       this.setState({carList: res.data})
+      console.log(res.data)
     })
   }
 
@@ -21,7 +22,7 @@ class CarList extends Component {
     ))
   }
   render () {
-    return <View>{this.renderList()}</View>
+    return <ScrollView>{this.renderList()}</ScrollView>
   }
 }
 

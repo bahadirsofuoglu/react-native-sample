@@ -8,7 +8,7 @@ const Item = props => {
 const styles = {
   viewStyle: {
     borderWidth: 1,
-    borderColor: 'gainsbro',
+    borderColor: 'gainsboro',
     shadowColor: 'black',
     shadowOffSet: {width: 1, height: 1},
     shadowOpacity: 0.1,

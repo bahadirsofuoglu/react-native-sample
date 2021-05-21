@@ -5,7 +5,7 @@ import CarList from './src/components/CarList'
 
 const App = () => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <Header title={'Cars'} />
       <CarList />
     </View>
