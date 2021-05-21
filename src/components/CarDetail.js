@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, Image} from 'react-native'
+import {View, Text, Image, Linking} from 'react-native'
 
 import Item from './Item'
 import ItemSection from './ItemSection'
@@ -18,7 +18,7 @@ const CarDetail = ({brand}) => {
         <Image style={imageStyle} source={{uri: brand.model[0].image}} />
       </ItemSection>
       <ItemSection>
-        <Button />
+        <Button buttonPress={() => Linking.openURL(brand.model[0].url)} />
       </ItemSection>
     </Item>
   )
