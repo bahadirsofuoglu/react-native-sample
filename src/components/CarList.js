@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native'
+import {View} from 'react-native'
 import axios from 'axios'
+
+import CarDetail from './CarDetail'
 class CarList extends Component {
   constructor () {
     super()
@@ -15,7 +17,7 @@ class CarList extends Component {
 
   renderList = () => {
     return this.state.carList.map(brand => (
-      <Text key={brand.model[0].name}>{brand.model[0].name}</Text>
+      <CarDetail key={brand.model[0].name} brand={brand} />
     ))
   }
   render () {
